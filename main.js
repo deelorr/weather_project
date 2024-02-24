@@ -13,6 +13,7 @@ my_form.addEventListener('submit', async (event) => {
   await weatherData(zipcode);
 });
 
+
 const weatherData = async (zipcode) => {
   const locationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode},us&appid=51438966e355f15d7ee85db66db192a4`);
   const locationData = await locationResponse.json();
@@ -27,6 +28,7 @@ const weatherData = async (zipcode) => {
   const forecast = weatherData.weather[0].description;
   const humidity = weatherData.main.humidity;
   const city = weatherData.name;
+  const state = locationData.state;
   cardBox.innerHTML = `
     <div id="card">
       <div id="card-top">
@@ -41,4 +43,6 @@ const weatherData = async (zipcode) => {
       </div>
   </div>
   `
+  // definitely looked up how to get the temperature to display correctly
 }
+

@@ -1,6 +1,8 @@
 html {
     background-image: url(https://www.noaa.gov/media/image_download/8a650749-196b-44c7-842b-3caa64e925d0);
     background-size: cover;
+    background-repeat: stretch;
+    background-attachment: fixed;
 }
 
 
@@ -24,7 +26,7 @@ form button {
     background-color: rgba(189, 243, 247, 0.384);
     border: 5px solid rgb(255, 255, 255);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 form button:hover {
