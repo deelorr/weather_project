@@ -1,16 +1,100 @@
-#header {
+html {
+    background-image: url(https://www.noaa.gov/media/image_download/8a650749-196b-44c7-842b-3caa64e925d0);
+    background-size: cover;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(189, 243, 247, 0.548);
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form button {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(189, 243, 247, 0.384);
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+form button:hover {
+    background-color: rgba(189, 243, 247, 0.753);
+}
+
+form input {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#headerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#headerText {
+    text-align: center;
+    color: white;
+    background-color: rgba(189, 243, 247, 0.253);
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(189, 243, 247, 0.548);
+}
+
+#headerText h1 {
+    margin: 5px;
+    padding: 5px;
+}
+
+#headerText h3 {
+    margin: 5px;
+    padding: 5px;
+}
+
+#title {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    color: white;
+    border: white 5px solid;
+    border-radius: 5px;
+}
+
+#formBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
 }
 
 #cardBox {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
 }
 
 #card {
@@ -20,6 +104,10 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 15px;
+    border: 5px solid rgb(255, 254, 254);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(189, 243, 247, 0.548);
 }
 
 #card-top {
@@ -27,6 +115,11 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    background-color: rgba(189, 243, 247, 0);
+    color: white;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+
 }
 
 #card-top h2 {
@@ -44,6 +137,11 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    margin: 10px;
+    background-color: rgba(189, 243, 247, 0);
+    color: white;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
 }
 
 #card-bottom p {

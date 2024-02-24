@@ -2,7 +2,7 @@ const currentDate = new Date();
 const currentDayOfMonth = currentDate.getDate();
 const currentMonth = currentDate.getMonth();
 const currentYear = currentDate.getFullYear();
-const dateString = currentDayOfMonth + "-" + (currentMonth + 1) + "-" + currentYear;
+const dateString = (currentMonth + 1) + "/" + currentDayOfMonth + "/" + currentYear;
 
 const my_form = document.querySelector('form');
 console.log(my_form);
