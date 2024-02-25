@@ -15,12 +15,12 @@ my_form.addEventListener('submit', async (event) => {
 
 
 const weatherData = async (zipcode) => {
-  const locationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode},us&appid=51438966e355f15d7ee85db66db192a4`);
+  const locationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode},us&appid={API_KEY}`);
   const locationData = await locationResponse.json();
   console.log('Location Data:', locationData);
   const lat = locationData.lat;
   const lon = locationData.lon;
-  const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude={part}&appid=51438966e355f15d7ee85db66db192a4`);
+  const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude={part}&appid={API_KEY}`);
   const weatherData = await weatherResponse.json();
   console.log('Weather Data:', weatherData);
   const highTemp = weatherData.main.temp_max;
@@ -38,6 +38,7 @@ const weatherData = async (zipcode) => {
       <div id="card-bottom">
               <p>High Temp: ${Math.round((highTemp - 273.15) * 1.8 + 32).toFixed(0)}°F</p>
               <p>Low Temp: ${Math.round((lowTemp - 273.15) * 1.8 + 32).toFixed(0)}°F</p>
+
               <p>Forecast: ${forecast}</p>
               <p>Humidity: ${humidity}%</p>
       </div>
