@@ -1,3 +1,5 @@
+import apiKey from './config.js';
+
 const currentDate = new Date();
 const currentDayOfMonth = currentDate.getDate();
 const currentMonth = currentDate.getMonth();
@@ -13,14 +15,13 @@ my_form.addEventListener('submit', async (event) => {
   await weatherData(zipcode);
 });
 
-
 const weatherData = async (zipcode) => {
-  const locationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode},us&appid={API_KEY}`);
+  const locationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zipcode},us&appid=${apiKey}`);
   const locationData = await locationResponse.json();
   console.log('Location Data:', locationData);
   const lat = locationData.lat;
   const lon = locationData.lon;
-  const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude={part}&appid={API_KEY}`);
+  const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}`);
   const weatherData = await weatherResponse.json();
   console.log('Weather Data:', weatherData);
   const highTemp = weatherData.main.temp_max;
@@ -43,7 +44,5 @@ const weatherData = async (zipcode) => {
               <p>Humidity: ${humidity}%</p>
       </div>
   </div>
-  `
-  // definitely looked up how to get the temperature to display correctly
+  `  // definitely looked up how to get the temperature to display correctly
 }
-
